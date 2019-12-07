@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+urlstrend = [
+     path('squirrel_sightings/', include('Squirrel_Sightings.urls')),   
+     path('admin/', admin.site.urls),
+ ]
