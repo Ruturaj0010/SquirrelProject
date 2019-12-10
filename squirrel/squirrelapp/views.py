@@ -77,41 +77,41 @@ def stats(request):
             chasing_count +=1
         else:
             pass
-        if F.Primary_Fur_Colour == 'Black':
+        if s.Fur_Colour == 'Black':
             black_count +=1
-        elif F.Primary_Fur_Colour == 'Cinnamon':
+        elif s.Fur_Colour == 'Cinnamon':
             cinnamon_count +=1
-        elif F.Primary_Fur_Colour == 'Gray':
+        elif s.Fur_Colour == 'Gray':
             gray_count +=1
         else:
             pass
-        if F.Foraging == True:
+        if s.Foraging == True:
             foraging_count +=1
         else:
             pass
-        if F.Eating == True:
+        if s.Eating == True:
             eating_count +=1
         else:
             pass
-        if F.Age == 'Juvenile':
+        if s.Age == 'Juvenile':
             juvenile_count +=1
-        elif F.Age == 'Adult':
+        elif s.Age == 'Adult':
             adult_count +=1
         else:
             pass
-        if F.Kuks == True:
+        if s.Kuks == True:
             kuks_count +=1
         else:
             pass
-        if F.Quaas == True:
+        if s.Quaas == True:
             quaas_count +=1
         else:
             pass
-        if F.Moans == True:
+        if s.Moans == True:
             moans_count +=1
         else:
             pass
-        if F.Tail_flags == True:
+        if s.Tail_flags == True:
             tail_flags_count +=1
         else:
             pass
