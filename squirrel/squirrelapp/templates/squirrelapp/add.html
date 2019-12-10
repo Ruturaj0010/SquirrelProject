@@ -3,7 +3,7 @@
     <body>    
         <form method="post">
 	  {% csrf_token %}
-	  {{ form.Unique_Squirrel_ID.label}}:     {{ form.Unique_Squirrel_ID }}<br><br>
+	    {{ form.Squirrel_Id.label}}:            {{ form.Squirrel_Id }}<br><br>
 	    {{ form.Latitude.label}}:               {{ form.Latitude }}<br><br>
 	    {{ form.Longitude.label}}:              {{ form.Longitude }}<br><br>
 	    {{ form.Shift.label}}:                  {{ form.Shift }}<br><br>
@@ -11,18 +11,18 @@
 	    {{ form.Age.label}}:                    {{ form.Age }}<br><br>
 	    {{ form.Location.label}}:               {{ form.Location }}<br><br>
 	    {{ form.Specific_location.label}}:      {{ form.Specific_location }}<br><br>
-	    {{ form.Primary_Fur_Colour.label}}:     {{ form.Primary_Fur_Colour }}<br><br>
+	    {{ form.Fur_Colour.label}}:     {{ form.Fur_Colour }}<br><br>
 	    {{ form.Running.label}}:                {{ form.Running }}<br><br>
 	    {{ form.Chasing.label}}:                {{ form.Chasing }}<br><br>
 	    {{ form.Climbing.label}}:               {{ form.Climbing }}<br><br>
 	    {{ form.Eating.label}}:                 {{ form.Eating }}<br><br>
 	    {{ form.Foraging.label}}:               {{ form.Foraging }}<br><br>
 	    {{ form.Other_Activities.label}}:       {{ form.Other_Activities }}<br><br>
-	    {{ form.Kuks.label}}:                   {{ form.Kuks }}<br><br>
-	    {{ form.Quaas.label}}:                  {{ form.Quaas }}<br><br>
-	    {{ form.Moans.label}}:                  {{ form.Moans }}<br><br>
+	    {{ form.kuk.label}}:                   {{ form.kuk }}<br><br>
+	    {{ form.quaas.label}}:                  {{ form.quaas }}<br><br>
+	    {{ form.moan.label}}:                  {{ form.moan }}<br><br>
 	    {{ form.Tail_flags.label}}:             {{ form.Tail_flags }}<br><br>
-	    {{ form.Tail_twitches.label}}:          {{ form.Tail_twitches }}<br><br>
+	    {{ form.Tail_twitch.label}}:          {{ form.Tail_twitches }}<br><br>
 	    {{ form.Approaches.label}}:             {{ form.Approaches }}<br><br>
 	    {{ form.Indifferent.label}}:            {{ form.Indifferent }}<br><br>
 	    {{ form.Runs_from.label}}:              {{ form.Runs_from }}<br><br>
