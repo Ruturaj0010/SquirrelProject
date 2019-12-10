@@ -1,5 +1,5 @@
 
-m django.forms import ModelForm
+from django.forms import ModelForm
 from .models import Squirrels
 from django.db import models
 from django import forms
