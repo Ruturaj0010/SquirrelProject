@@ -16,14 +16,14 @@ def View(request):
     return render(request, 'squirrelapp/View.html',context)
 
 def coordinates(request):
-    quirrels  = Squirrels.objects.all()[:100]
+    squirrels  = Squirrels.objects.all()[:100]
     context = {
             "squirrels": squirrels,
         }
     return render(request, 'squirrelapp/map.html', context)
 
-def edit_squirrel(request, Unique_Squirrel_ID):
-    squirrel = Squirrels.objects.get(Squirrel_ID=Unique_Squirrel_ID)
+def edit_squirrel(request, Squirrel_Id):
+    squirrel = Squirrels.objects.get(Squirrel_Id=Squirrel_Id)
     if request.method == 'POST':
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
@@ -115,20 +115,20 @@ def stats(request):
             tail_flags_count +=1
         else:
             pass
-        details = {'Squirrels found eating': eating_count,
-                   'Squirrels found running':running_count,
-                   'Sqquirrels found climbing':climbing_count,
-                   'Squirrels found chasing':chasing_count,
-                   'Squirrels found with black fur':black_count,
-                   'Squirrels found with cinnamon fur':cinnamon_count,
-                   'Squirrels found with gray fur':gray_count,
-                   'Squirrels found foraging':foraging_count,
-                   'Squirrels found flagging tails':tail_flags_count,
-                   'Squirrels found as a juvenile':juvenile_count,
-                   'Squirrels found as a adult': adult_count,
-                   'Squirrels found making kuk sounds':kuks_count,
-                   'Squirrels found making quaas sounds':quaas_count,
-                   'Squirrels found making moan sounds': moans_count,
+        details = {'Squirrels Eating': eating_count,
+                   'Squirrels Running':running_count,
+                   'Squirrels Climbing':climbing_count,
+                   'Squirrels Chasing':chasing_count,
+                   'Squirrels with black fur':black_count,
+                   'Squirrels with cinnamon fur':cinnamon_count,
+                   'Squirrels with gray fur':gray_count,
+                   'Squirrels foraging':foraging_count,
+                   'Squirrels with flagging tails':tail_flags_count,
+                   'Squirrels juvenile':juvenile_count,
+                   'Squirrels adult': adult_count,
+                   'Squirrels making kuk sounds':kuks_count,
+                   'Squirrels making quaas sounds':quaas_count,
+                   'Squirrels making moan sounds': moans_count,
                    }
         context = {"stats":details}
         return render(request, 'squirrelapp/stats.html', context)
