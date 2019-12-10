@@ -25,7 +25,7 @@ class Squirrels(models.Model):
                         (BLANK, ''),
                         (UNKNOWN, '?'),
                       )
-        COLOR_CHOICES = (
+        COLOUR_CHOICES = (
                         (BLACK, 'Black'),
                         (CINNAMON, 'Cinnamon'),
                         (GRAY, 'Gray'),
@@ -38,6 +38,7 @@ class Squirrels(models.Model):
         Squirrel_Id = models.CharField(
                           max_length=30,
                           help_text=_("Squirrel ID"),
+                          primary_key=True,
                       )
         Latitude = models.FloatField(help_text=_("Latitude"),)
 
@@ -70,7 +71,7 @@ class Squirrels(models.Model):
                        )
         Fur_Colour = models.CharField(
                            max_length=20,
-                           choices=COLOR_CHOICES,
+                           choices=COLOUR_CHOICES,
                            default=BLACK,
                            help_text=_("Fur Colour"),
                       )
@@ -87,12 +88,12 @@ class Squirrels(models.Model):
                             help_text=_('Climbing'),
                       )
         Eating = models.BooleanField(
-                             default=False,
-                             help_text=_('Eeating'),
+                            default=False,
+                            help_text=_('Eeating'),
                        )
         Foraging = models.BooleanField(
-                             default=False,
-                             help_text=_('Foraging'),
+                            default=False,
+                            help_text=_('Foraging'),
                         )
         Other_Activities = models.CharField(
                             max_length=100,

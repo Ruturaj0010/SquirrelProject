@@ -1,3 +1,4 @@
+{% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'squirrelapp/style.css' %}">
 <table>
     <thead>
@@ -27,18 +28,21 @@
 	    <th>Indifferent</th>
 	    <th>Run from</th>
        	</tr>
-        <tbody>
-		<tr>
-			<td>{{sighting.id}}</td>
-		<td> <a href="{{sighting.Squirrel_Id}}/edit/">{{sighting.Squirrel_Id}}</a> </td>
+
+    </thead> 
+    <tbody>
+	    {% for sighting in sightings %}
+    	    <tr>
+		
+	<td> <a href="{{sighting.Squirrel_Id}}/edit/">{{sighting.Squirrel_Id}}</a> </td>
 	        	<td>{{sighting.Latitude}} </td>
 			<td>{{sighting.Longitude}} </td>
-		<td>{{sighting.Shift}} </td>
-		<td>{{sighting.Date}} </td>
+	<td>{{sighting.Shift}} </td>
+	<td>{{sighting.Date}} </td>
 		        <td>{{sighting.Age}} </td>
 			<td>{{sighting.Location}} </td>
 			<td>{{sighting.Specific_Location}} </td>
-			<td>{{Fur_Colour}} </td>
+			<td>{{sighting.Fur_Colour}} </td>
 			<td>{{sighting.Running}} </td>
 			<td>{{sighting.Chasing}} </td>
 			<td>{{sighting.Climbing}} </td>
@@ -54,6 +58,7 @@
 			<td>{{sighting.Indifferent}} </td>
 			<td>{{sighting.Runs_from}} </td>
 		</tr>
+		{% endfor %}
 	</tbody>
 </table>
 
